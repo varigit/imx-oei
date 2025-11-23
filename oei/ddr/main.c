@@ -102,6 +102,9 @@ int oei_main(uint32_t argc, uint32_t *argv)
         OEI_BUILD, OEI_COMMIT, OEI_DATE, OEI_TIME);
 
     printf("DDR OEI: SOC %s, Board %s\n", OEI_DEVICES, OEI_BOARD);
+#ifdef OEI_DDR_CONFIG
+    printf("DDR OEI: CFG: %s\n", OEI_DDR_CONFIG);
+#endif
     /**
      * Pass offset = 0 for iMX95 A0 since there is no ROM support
      * for training data dummy entry
